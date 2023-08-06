@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Number Cruncher</string>
+    <string name="img_desc">Operator or Number.</string>
+</resources>
