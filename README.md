@@ -6,7 +6,8 @@ Number Cruncher is a calculator app for swift and precise calculations. Simplify
 ```bash
   ➞ Rapid and efficient.
   ➞ Sleek design.
-  ➞ Use the backspace button to amend a simple mistake or use the all-clear button to remove the expression.
+  ➞ Use the backspace button to amend a simple mistake or use the all-clear button to
+     remove the expression.
   ```
     
 ## Screenshots
