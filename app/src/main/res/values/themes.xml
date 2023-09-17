@@ -1,12 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NumberCruncher" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!-- Base application theme-->
+    <style name="Theme.NumberCruncher" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:statusBarColor">#191919</item>
     </style>
 
-    <style name="Theme.NumberCruncher" parent="Base.Theme.NumberCruncher">
+    <!-- Splash screen theme-->
+    <style name="splashScreen" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="backgroundColor">#191919</item>
         <item name="android:statusBarColor">#191919</item>
     </style>
 </resources>

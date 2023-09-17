@@ -1,5 +1,6 @@
 package com.bilalmirza.numbercruncher
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +12,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setTheme(R.style.Theme_NumberCruncher)
         setContentView(binding.root)
 
         binding.apply {
@@ -89,8 +92,10 @@ class MainActivity : AppCompatActivity() {
                         outPuttxt.text = "= " + DecimalFormat("0.#####").format(result).toString()
                     }
                 } catch (exception: Exception) {
-                    Toast.makeText(this@MainActivity, "Please enter the correct expression.",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@MainActivity, "Please enter the correct expression.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     inputTxt.text = ""
                     outPuttxt.text = ""
                 }
@@ -98,12 +103,13 @@ class MainActivity : AppCompatActivity() {
             //  BACKSPACE BUTTON
             btnBackspace.setOnClickListener {
                 val length = inputTxt.length()
-                if (length > 0){
+                if (length > 0) {
                     inputTxt.text = inputTxt.text.subSequence(0, length - 1)
                 }
             }
         }
     }
+
     //  FUNCTION TO REPLACE '×' WITH '*' AND TO REPLACE '÷' WITH '/'
     private fun getInputExpression(): String {
         var expression = binding.inputTxt.text.replace(Regex("÷"), "/")
